@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3679495944169943762}
   m_Layer: 0
   m_Name: Circle 1
-  m_TagString: Untagged
+  m_TagString: Star1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1489577206933791149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.32, y: 0.45319808, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7533976908063544985}
@@ -136,9 +136,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0068954984, y: 0}
   serializedVersion: 2
-  m_Radius: 0.685
+  m_Radius: 0.37684456
 --- !u!1 &8560936414940338225
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,18 +222,9 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.232557
+        value: 0.13023156
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5847592
-        value: 0.1505205
-        inSlope: -0.34344405
-        outSlope: -0.34344405
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
