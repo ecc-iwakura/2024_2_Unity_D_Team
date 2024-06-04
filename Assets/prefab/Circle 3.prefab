@@ -138,7 +138,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.0017102957, y: 0}
   serializedVersion: 2
-  m_Radius: 0.41394305
+  m_Radius: 0.45530534
 --- !u!1 &3782076998557644410
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5017520516601502816}
   - component: {fileID: 5017520516601502819}
   m_Layer: 0
-  m_Name: Stella
+  m_Name: Stella 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 275d575cdb0e6f540964324cb17156e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 914830214cc8bb84b98385a32047727f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

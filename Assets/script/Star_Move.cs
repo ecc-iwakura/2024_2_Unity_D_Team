@@ -13,7 +13,7 @@ public class Star_Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0; // d—Í‚ğ–³Œø‚É‚·‚é
-        Destroy(this.gameObject,4.5f);
+        Destroy(this.gameObject,4);
     }
 
     void Update()
