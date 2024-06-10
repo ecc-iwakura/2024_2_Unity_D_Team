@@ -26,7 +26,7 @@ public class Get_Star_R : MonoBehaviour
                     if (hit.transform.gameObject.tag == targetTags[i]) // タグを比較
                     {
                         Debug.Log("Clicked on object with tag: " + targetTags[i]);
-                        manager.AddScore(i, 5);
+                        manager.AddScore(i, 4);
                         Destroy(hit.collider.gameObject);
                         break; // タグが一致したらループを抜ける
                     }
