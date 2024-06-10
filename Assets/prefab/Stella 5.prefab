@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5017520516601502816}
   - component: {fileID: 5017520516601502819}
   m_Layer: 0
-  m_Name: Stella 2
-  m_TagString: Stella2
+  m_Name: Stella 5
+  m_TagString: Stella4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5017520516601502818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 105.13, y: 1.6584208, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 98350d16f9a8ba249bc69b7c521b3922, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00712092f4d526a4390dcb1e6e854894, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
