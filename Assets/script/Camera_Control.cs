@@ -5,35 +5,50 @@ using UnityEngine;
 public class Camera_Control : MonoBehaviour
 {
     bool isCameraOnRightSide = true; // カメラが右側にあるかどうかを示す変数
-
+    public int cleartime = 180;
+    bool clear = false;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        
+        yield return new WaitForSeconds(cleartime);
+        clear = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)) { }
-        else
+        if (clear)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if(isCameraOnRightSide)
             {
-                // カメラが右側にある場合
-                if (isCameraOnRightSide)
+                transform.position = new Vector3(100, 0, -1);
+                isCameraOnRightSide = false;
+            }
+
+        }
+
+        else { 
+            if (Input.GetMouseButton(0)) { }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    // カメラを左側に移動
-                    transform.position = new Vector3(100, 0,-1);
-                    // カメラの位置を更新
-                    isCameraOnRightSide = false;
-                }
-                else // カメラが左側にある場合
-                {
-                    // カメラを右側に移動
-                    transform.position = new Vector3(0, 0,-1);
-                    // カメラの位置を更新
-                    isCameraOnRightSide = true;
+                    // カメラが左側にある場合
+                    if (isCameraOnRightSide)
+                    {
+                        // カメラを右側に移動
+                        transform.position = new Vector3(100, 0, -1);
+                        // カメラの位置を更新
+                        isCameraOnRightSide = false;
+                    }
+
+                    else // カメラが右側にある場合
+                    {
+                        // カメラを左側に移動
+                        transform.position = new Vector3(0, 0, -1);
+                        // カメラの位置を更新
+                        isCameraOnRightSide = true;
+                    }
                 }
             }
         }
