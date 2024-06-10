@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Get_Star : MonoBehaviour
 {
+    private AudioSource audioSource;
     public string[] targetTags = { "Star0", "Star1", "Star2", "Star3" };
 
     private Star_bag manager;
@@ -28,6 +29,7 @@ public class Get_Star : MonoBehaviour
                         Debug.Log("Clicked on object with tag: " + targetTags[i]);
                         manager.AddScore(i, 1);
                         Destroy(hit.collider.gameObject);
+                        audioSource.Play();
                         break; // タグが一致したらループを抜ける
                     }
                 }
