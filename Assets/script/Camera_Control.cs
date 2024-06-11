@@ -7,6 +7,7 @@ public class Camera_Control : MonoBehaviour
     bool isCameraOnRightSide = true; // ÉJÉÅÉâÇ™âEë§Ç…Ç†ÇÈÇ©Ç«Ç§Ç©Çé¶Ç∑ïœêî
     public int cleartime = 180;
     bool clear = false;
+    bool escapekey =false;
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -17,6 +18,27 @@ public class Camera_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (escapekey) 
+            {
+                if (isCameraOnRightSide)
+                {
+                    transform.position = new Vector3(0, 0, -1);
+                }
+                else 
+                {
+                    transform.position = new Vector3(100, 0, -1);
+                }
+                escapekey = false;
+            }
+            else
+            {
+                transform.position = new Vector3(-100, 0, -1);
+                escapekey = true;
+            }
+        
+        }
+
         if (clear)
         {
             if(isCameraOnRightSide)
