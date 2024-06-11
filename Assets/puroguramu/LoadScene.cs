@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     // 切り替えるシーンの名前を指定します
-    public string Sample;
+    public int Sample;
 
     void Update()
     {
