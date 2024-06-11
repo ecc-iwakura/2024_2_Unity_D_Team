@@ -2234,7 +2234,7 @@ MonoBehaviour:
   y: 7
   x_max: 1
   x_min: -14
-  cooldown_max: 1
+  cooldown_max: 0.8
   cooldown_min: 0.4
 --- !u!82 &1840047220
 AudioSource:
