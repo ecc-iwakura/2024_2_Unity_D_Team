@@ -11,16 +11,16 @@ class Star_Creat : MonoBehaviour
     public float cooldown_max = 1;
     public float cooldown_min = 0.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Timer");
+        StartCoroutine(Timer());
     }
 
     void SpawnRandomStar()
     {
-        int randomIndex = Random.Range(0, star_prefabs.Length); // ランダムなインデックスの取得
-        GameObject star = Instantiate(star_prefabs[randomIndex], new Vector3(Random.Range(x_min, x_max), y, 1), Quaternion.identity);
+        int randomIndex = Random.Range(0, star_prefabs.Length);
+        Vector3 spawnPosition = new Vector3(Random.Range(x_min, x_max), y, 0); // Z軸を0にするか、不要な場合は省略できる
+        Instantiate(star_prefabs[randomIndex], spawnPosition, Quaternion.identity);
     }
 
     IEnumerator Timer()

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 8268649586305150807}
   - component: {fileID: 8325804618457163162}
   - component: {fileID: -3679495944169943762}
-  - component: {fileID: 4198782610968647142}
+  - component: {fileID: 7012447724705862046}
   m_Layer: 0
-  m_Name: Circle 3
-  m_TagString: Star3
+  m_Name: Circle 6
+  m_TagString: Star6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1489577206933791149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.32, y: 0.45319808, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2038597461465394553}
@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 914830214cc8bb84b98385a32047727f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93e39980df2e62c4db68ff9fab3d6e5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7d8f14f2a78e0498bcff931cc88876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 11
+  fallSpeed: 12
   direction: {x: 1, y: -1}
 --- !u!50 &8325804618457163162
 Rigidbody2D:
@@ -140,7 +140,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0017102957, y: 0}
   serializedVersion: 2
   m_Radius: 0.45530534
---- !u!82 &4198782610968647142
+--- !u!82 &7012447724705862046
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,7 +319,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.116282284
+        value: 0.2633465
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -340,7 +340,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.8588236, g: 0.89019614, b: 0, a: 1}
+      key0: {r: 0.6627451, g: 0.3803922, b: 0.82745105, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

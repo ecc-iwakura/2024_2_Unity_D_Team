@@ -21,11 +21,17 @@ public class Dawn : MonoBehaviour
     {
         if (isMoving)
         {
-            float t = (Time.time - startTime) / duration;
-            Vector3 newPosition = startPos + Vector3.up * (distance / duration) * t;
-            transform.position = newPosition;
-
-          
+            float timePassed = Time.time - startTime;
+            if (timePassed < duration)
+            {
+                float distanceMoved = (distance / duration) * timePassed;
+                transform.position = startPos + Vector3.up * distanceMoved;
+            }
+            else
+            {
+                transform.position = startPos + Vector3.up * distance;
+                isMoving = false; // ˆÚ“®Š®—¹
+            }
         }
     }
 }

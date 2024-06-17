@@ -16,6 +16,7 @@ public class Star_Inventry_button : MonoBehaviour
     {
         manager = GetComponent<Star_bag>();
     }
+
     public void StarSelect(int stars)
     {
         int i = manager.GetScore(stars);

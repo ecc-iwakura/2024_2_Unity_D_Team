@@ -5,33 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class Get_Star : MonoBehaviour
 {
-    private AudioSource audioSource;
-    public string[] targetTags = {};
-
     private Star_bag manager;
+    private AudioSource audioSource;
+
+    public string[] targetTags = { };
+
     private void Start()
     {
         manager = GetComponent<Star_bag>();
+        audioSource = GetComponent<AudioSource>();
     }
-    void Update()
+
+    private void Update()
     {
         if (Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
-            if (hit.collider != null) // Rayが何かに当たったかチェック
+            if (hit.collider != null)
             {
-                for (int i = 0; i < targetTags.Length; i++)
+                int index = System.Array.IndexOf(targetTags, hit.transform.gameObject.tag);
+                if (index != -1)
                 {
-                    if (hit.transform.gameObject.tag == targetTags[i]) // タグを比較
-                    {
-                        Debug.Log("Clicked on object with tag: " + targetTags[i]);
-                        manager.AddScore(i, 1);
-                        Destroy(hit.collider.gameObject);
-                        GetComponent<AudioSource>().Play();
-                        break; // タグが一致したらループを抜ける
-                    }
+                    Debug.Log("Clicked on object with tag: " + targetTags[index]);
+                    manager.AddScore(index, 1);
+                    Destroy(hit.collider.gameObject);
+                    audioSource.Play();
                 }
             }
         }
