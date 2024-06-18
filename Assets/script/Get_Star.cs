@@ -28,7 +28,7 @@ public class Get_Star : MonoBehaviour
                 int index = System.Array.IndexOf(targetTags, hit.transform.gameObject.tag);
                 if (index != -1)
                 {
-                    Debug.Log("Clicked on object with tag: " + targetTags[index]);
+                  
                     manager.AddScore(index, 1);
                     Destroy(hit.collider.gameObject);
                     audioSource.Play();
