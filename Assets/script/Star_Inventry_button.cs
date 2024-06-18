@@ -20,10 +20,10 @@ public class Star_Inventry_button : MonoBehaviour
     public void StarSelect(int stars)
     {
         int i = manager.GetScore(stars);
-        if (i >= 4)
+        if (i >= 2)
         {
             Instantiate(star_prefabs[stars], spawnPoint.position, spawnPoint.rotation);
-            manager.AddScore(stars,-4);
+            manager.AddScore(stars,-2);
         }
        
     }

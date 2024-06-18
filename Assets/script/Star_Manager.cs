@@ -37,7 +37,7 @@ public class Star_Manager : MonoBehaviour
                 Text scoreText = scoreObjects[j].GetComponent<Text>();
                 scores[j] = manager.GetScore(j);
                 // テキストの表示を入れ替える
-                scoreText.text = "" + (scores[j] / 4);
+                scoreText.text = "" + (scores[j] / 2);
             }
         }
     }

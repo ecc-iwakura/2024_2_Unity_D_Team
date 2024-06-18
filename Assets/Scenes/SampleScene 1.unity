@@ -1684,7 +1684,7 @@ Transform:
   m_GameObject: {fileID: 842367975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 100, y: 0, z: 0.0000076293945}
-  m_LocalScale: {x: 4.9999995, y: 5.9999995, z: 0.99999994}
+  m_LocalScale: {x: 6, y: 5.9999995, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1896978457}
@@ -2086,7 +2086,7 @@ Transform:
   m_GameObject: {fileID: 1114284699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.34, z: 0}
-  m_LocalScale: {x: 5, y: 6, z: 1.0869905}
+  m_LocalScale: {x: 6, y: 6, z: 1.0869905}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 33
-  duration: 180
+  duration: 90
 --- !u!1 &1356098688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,7 +2726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9ab7453b74fa748bc135edddca6601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleartime: 180
+  cleartime: 90
 --- !u!1 &1760899740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3084,7 +3084,7 @@ MonoBehaviour:
   y: 7
   x_max: 1
   x_min: -14
-  cooldown_max: 0.7
+  cooldown_max: 0.6
   cooldown_min: 0.3
 --- !u!82 &1840047220
 AudioSource:
