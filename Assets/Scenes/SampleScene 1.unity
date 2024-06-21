@@ -2369,7 +2369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 36
-  duration: 120
+  duration: 180
 --- !u!1 &1356098688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9ab7453b74fa748bc135edddca6601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleartime: 120
+  cleartime: 180
 --- !u!1 &1688163093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,9 +2849,9 @@ MonoBehaviour:
   y: 7
   x_max: 1
   x_min: -14
-  cooldown_max: 0.6
+  cooldown_max: 0.9
   cooldown_min: 0.3
-  ShowerTime: 10
+  ShowerTime: 7
 --- !u!4 &1688163095
 Transform:
   m_ObjectHideFlags: 0
@@ -2900,10 +2900,10 @@ MonoBehaviour:
   x: -17
   y_max: 6
   y_min: 0
-  cooldown_max: 5
-  cooldown_min: 3
-  Crowd_max: 7
-  Crowd_min: 5
+  cooldown_max: 4
+  cooldown_min: 2
+  crowd_max: 5
+  crowd_min: 1
 --- !u!1 &1760899740
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,13 +13,13 @@ class Star_Creat : MonoBehaviour
     public int ShowerTime = 5;
     float originalmaxCooldown;
     float originalminCooldown;
-    bool meteorShowerRunning = false; 
+    bool meteorShowerRunning = false;
 
     void Start()
     {
         StartCoroutine(Timer());
-        originalmaxCooldown= cooldown_max;
-        originalminCooldown= cooldown_min;
+        originalmaxCooldown = cooldown_max;
+        originalminCooldown = cooldown_min;
     }
 
     void SpawnRandomStar()
@@ -37,32 +37,28 @@ class Star_Creat : MonoBehaviour
     IEnumerator MeteorShower()
     {
         if (meteorShowerRunning)
-        {
-            yield break; // すでに実行中なら何もしない
-        }
+            yield break;
 
-        meteorShowerRunning = true; // 実行中フラグを立てる
+        meteorShowerRunning = true;
 
-        
-        cooldown_max = cooldown_max / 2.0f;
-        cooldown_min = cooldown_min / 2.0f;
+        // メテオシャワー中の間、生成間隔を短縮
+        float originalCooldownMax = cooldown_max;
+        float originalCooldownMin = cooldown_min;
+        cooldown_max /= 3.0f;
+        cooldown_min /= 2.0f;
+
         yield return new WaitForSeconds(ShowerTime);
-        cooldown_max = originalmaxCooldown;
-        cooldown_min = originalminCooldown;
+
+        // メテオシャワー終了後、生成間隔を元に戻す
+        cooldown_max = originalCooldownMax;
+        cooldown_min = originalCooldownMin;
         Debug.Log("Cooldown reset");
 
-        meteorShowerRunning = false; // 実行中フラグを下げる
+        meteorShowerRunning = false;
     }
-
-
-
-
-
 
     IEnumerator Timer()
     {
-       
-
         while (true)
         {
             SpawnRandomStar();
