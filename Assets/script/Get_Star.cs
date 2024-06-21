@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class Get_Star : MonoBehaviour
 {
     [SerializeField]
-    private Star_bag manager;
+    private Star_bag manager;//Star_bagが入ったオブジェクトをアタッチ
     [SerializeField]
-    private AudioSource audioSource;
+    private AudioSource audioSource;//鳴らしたい効果音が入ったオブジェクトをアタッチ
 
     public string[] targetTags = { };
 

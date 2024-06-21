@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Star_Inventry_button : MonoBehaviour
 {
+    [SerializeField]
     private Star_bag manager;
 
     // ボタンを配列として定義
@@ -14,7 +15,7 @@ public class Star_Inventry_button : MonoBehaviour
     public Transform spawnPoint;    // EmptyオブジェクトのTransform
     private void Start()
     {
-        manager = GetComponent<Star_bag>();
+       
     }
 
     public void StarSelect(int stars)

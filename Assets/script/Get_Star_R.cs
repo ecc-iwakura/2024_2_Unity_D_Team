@@ -17,17 +17,23 @@ public class Get_Star_R : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
-            if (hit.collider != null) // Rayが何かに当たったかチェック
+            // レイキャストの結果を格納する変数
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+            int numHits = Physics2D.RaycastNonAlloc(ray.origin, ray.direction, hits);
+
+            if (numHits > 0 && hits[0].collider != null)
             {
+                GameObject hitObject = hits[0].collider.gameObject;
+                int index = System.Array.IndexOf(targetTags, hitObject.tag);
                 for (int i = 0; i < targetTags.Length; i++)
                 {
-                    if (hit.transform.gameObject.tag == targetTags[i]) // タグを比較
+                    if (index != -1)
                     {
-                     
+
+
                         manager.AddScore(i, 2);
-                        Destroy(hit.collider.gameObject);
+                        Destroy(hitObject);
                         break; // タグが一致したらループを抜ける
                     }
                 }
