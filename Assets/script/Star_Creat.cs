@@ -52,7 +52,7 @@ class Star_Creat : MonoBehaviour
         // メテオシャワー終了後、生成間隔を元に戻す
         cooldown_max = originalCooldownMax;
         cooldown_min = originalCooldownMin;
-        Debug.Log("Cooldown reset");
+        
 
         meteorShowerRunning = false;
     }

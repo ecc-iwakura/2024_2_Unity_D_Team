@@ -2851,7 +2851,7 @@ MonoBehaviour:
   x_min: -14
   cooldown_max: 0.9
   cooldown_min: 0.3
-  ShowerTime: 7
+  ShowerTime: 10
 --- !u!4 &1688163095
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,8 +2879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f74ceef4058b2349ae28a9e0ca477ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown_max: 20
-  cooldown_min: 15
+  cooldown_max: 30
+  cooldown_min: 25
+  shower: {fileID: 1688163094}
+  crowdy: {fileID: 1688163097}
   Events: 2
 --- !u!114 &1688163097
 MonoBehaviour:
@@ -2902,8 +2904,8 @@ MonoBehaviour:
   y_min: 0
   cooldown_max: 4
   cooldown_min: 2
-  crowd_max: 5
-  crowd_min: 1
+  crowd_max: 6
+  crowd_min: 3
 --- !u!1 &1760899740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,6 +3182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0922169bc5ff4d9f88e0dbc72ee73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 1840047214}
+  audioSource: {fileID: 1840047220}
   targetTags:
   - Star0
   - Star1

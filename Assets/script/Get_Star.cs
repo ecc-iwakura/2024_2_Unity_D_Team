@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Get_Star : MonoBehaviour
 {
+    [SerializeField]
     private Star_bag manager;
+    [SerializeField]
     private AudioSource audioSource;
 
     public string[] targetTags = { };
 
     private void Start()
     {
-        manager = GetComponent<Star_bag>();
-        audioSource = GetComponent<AudioSource>();
+        
+       
     }
 
     private void Update()
@@ -21,16 +23,20 @@ public class Get_Star : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
-            if (hit.collider != null)
+            // ƒŒƒCƒLƒƒƒXƒg‚ÌŒ‹‰Ê‚ðŠi”[‚·‚é•Ï”
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+            int numHits = Physics2D.RaycastNonAlloc(ray.origin, ray.direction, hits);
+
+            if (numHits > 0 && hits[0].collider != null)
             {
-                int index = System.Array.IndexOf(targetTags, hit.transform.gameObject.tag);
+                GameObject hitObject = hits[0].collider.gameObject;
+                int index = System.Array.IndexOf(targetTags, hitObject.tag);
                 if (index != -1)
                 {
                   
                     manager.AddScore(index, 1);
-                    Destroy(hit.collider.gameObject);
+                    Destroy(hitObject);
                     audioSource.Play();
                 }
             }

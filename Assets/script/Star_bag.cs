@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Star_bag : MonoBehaviour
 {
+    [SerializeField]
     private static Star_bag[] instances; // スコアマネージャーの配列
+
     public int[] stars; // スコアの配列
 
     public static Star_bag GetInstance(int index)
