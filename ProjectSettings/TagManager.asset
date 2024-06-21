@@ -18,6 +18,7 @@ TagManager:
   - Stella5
   - Star6
   - Stella6
+  - Crowd_Delete
   layers:
   - Default
   - TransparentFX
