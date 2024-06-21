@@ -44,7 +44,7 @@ class Star_Creat : MonoBehaviour
         // メテオシャワー中の間、生成間隔を短縮
         float originalCooldownMax = cooldown_max;
         float originalCooldownMin = cooldown_min;
-        cooldown_max /= 3.0f;
+        cooldown_max /= 4.0f;
         cooldown_min /= 2.0f;
 
         yield return new WaitForSeconds(ShowerTime);

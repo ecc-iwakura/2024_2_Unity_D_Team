@@ -2768,9 +2768,9 @@ MonoBehaviour:
   y: 7
   x_max: 1
   x_min: -14
-  cooldown_max: 0.9
+  cooldown_max: 1.2
   cooldown_min: 0.3
-  ShowerTime: 10
+  ShowerTime: 12
 --- !u!4 &1688163095
 Transform:
   m_ObjectHideFlags: 0
