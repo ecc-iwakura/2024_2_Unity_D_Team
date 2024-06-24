@@ -2287,8 +2287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e66e81fc519a264a8c24e9ee742ea9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 36
-  duration: 180
+  distance: 37
+  duration: 120
 --- !u!1 &1356098688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9ab7453b74fa748bc135edddca6601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleartime: 180
+  cleartime: 120
 --- !u!1 &1688163093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +2738,7 @@ GameObject:
   - component: {fileID: 1688163094}
   - component: {fileID: 1688163096}
   - component: {fileID: 1688163097}
+  - component: {fileID: 1688163098}
   m_Layer: 0
   m_Name: StarEvent_Manager
   m_TagString: Untagged
@@ -2819,12 +2820,27 @@ MonoBehaviour:
   - {fileID: 4354265356960385528, guid: 03945de322f61614e8b887b687dc2f0f, type: 3}
   - {fileID: 4354265356960385528, guid: e5f93493ec683984aafdba6e55988c42, type: 3}
   x: -17
-  y_max: 6
+  y_max: 5
   y_min: 0
   cooldown_max: 4
   cooldown_min: 2
   crowd_max: 6
   crowd_min: 3
+--- !u!114 &1688163098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688163093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce4f21656f4f1046b5118ee501f9534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  star_prefabs: {fileID: 0}
+  y: 7
+  x: -8
 --- !u!1 &1760899740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3127,7 @@ MonoBehaviour:
   - Star4
   - Star5
   - Star6
+  Effect: {fileID: 2087212078212776621, guid: 593dd66dbab2b8740bafcc0b819cd699, type: 3}
 --- !u!114 &1840047217
 MonoBehaviour:
   m_ObjectHideFlags: 0
