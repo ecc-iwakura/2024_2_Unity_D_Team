@@ -7,7 +7,8 @@ public class Camera_Control : MonoBehaviour
     bool isCameraOnRightSide = true; // ƒJƒƒ‰‚ª‰E‘¤‚É‚ ‚é‚©‚Ç‚¤‚©‚ğ¦‚·•Ï”
     public int cleartime = 180;
     bool clear = false;
-    bool escapekey =false;
+    bool escapekey = false;
+    public GameObject[] end;
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -43,6 +44,11 @@ public class Camera_Control : MonoBehaviour
         {
             if(isCameraOnRightSide)
             {
+                for(int i = 0; i < end.Length; i++)
+                {
+                    Destroy(end[i]);
+
+                }
                 transform.position = new Vector3(100, 0, -1);
                 isCameraOnRightSide = false;
             }
@@ -75,4 +81,11 @@ public class Camera_Control : MonoBehaviour
             }
         }
     }
+
+    public void gameover()
+    {
+
+        clear = true;
+    }
+
 }

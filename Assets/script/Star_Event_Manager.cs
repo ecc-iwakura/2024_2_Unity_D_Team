@@ -11,6 +11,9 @@ public class Star_Event_Manager : MonoBehaviour
     private Star_Creat shower; // Star_Createが入ったオブジェクトををアタッチ
 
     [SerializeField]
+    private MetorCreat meteor;
+
+    [SerializeField]
     private Crowd_Creates crowdy; //Crowd_Createが入ったオブジェクトをアタッチ
     public int Events = 2; // Eventsの初期値を適切に設定
 
@@ -27,13 +30,18 @@ public class Star_Event_Manager : MonoBehaviour
         switch (eventIndex)
         {
             case 0:
-               
+                Debug.Log("0");
                 shower.StartMeteorShower();
                 break;
 
             case 1:
-              
+                Debug.Log("1");
                 crowdy.CloudyWeather();
+                break;
+
+            case 2:
+                Debug.Log("2");
+                meteor.Spawnmeteor();
                 break;
 
             default:

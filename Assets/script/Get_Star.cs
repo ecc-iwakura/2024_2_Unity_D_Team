@@ -10,12 +10,11 @@ public class Get_Star : MonoBehaviour
     private AudioSource audioSource;//鳴らしたい効果音が入ったオブジェクトをアタッチ
 
     public string[] targetTags = { };
-    [SerializeField] GameObject Effect;
+    [SerializeField] GameObject[] Effect;
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
+        
 
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -23,7 +22,7 @@ public class Get_Star : MonoBehaviour
 
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-            if (hit.collider != null) 
+            if (hit.collider != null)
             {
                 GameObject hitObject = hit.collider.gameObject;
                 int index = System.Array.IndexOf(targetTags, hitObject.tag);
@@ -32,10 +31,11 @@ public class Get_Star : MonoBehaviour
                     manager.AddScore(index, 1);
                     Destroy(hitObject);
                     audioSource.Play();
-                    GameObject effect = Instantiate(Effect, mousePosition, Quaternion.identity);
+                    GameObject effect = Instantiate(Effect[index], mousePosition, Quaternion.identity);
                     Destroy(effect, 1.0f);
                 }
             }
-        }
+        
     }
+
 }
