@@ -19,6 +19,7 @@ TagManager:
   - Star6
   - Stella6
   - Crowd_Delete
+  - GeneratingObject
   layers:
   - Default
   - TransparentFX
