@@ -32,7 +32,7 @@ public class Get_Star_R : MonoBehaviour
                     {
 
 
-                        manager.AddScore(i, 2);
+                        manager.AddScore(i, 1);
                         Destroy(hitObject);
                         break; // タグが一致したらループを抜ける
                     }
