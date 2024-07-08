@@ -57,3 +57,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Stella
+    uniqueID: 3085340445
+    locked: 0

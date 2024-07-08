@@ -11,6 +11,7 @@ public class DragAndDrop : MonoBehaviour
     {
         // スプライトのレンダラーのsortingLayerNameを設定して、Stellaレイヤーを優先させる
         GetComponent<SpriteRenderer>().sortingLayerName = "Stella";
+        GetComponent<SpriteRenderer>().sortingOrder = 0; // 必要に応じてsortingOrderも設定
 
         // オブジェクトの位置とマウス位置の差分を計算する
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
