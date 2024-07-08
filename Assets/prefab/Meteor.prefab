@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efbdc93c42abd84eb206305d7e9fe0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantclick: 45
+  wantclick: 15
   audioSource: {fileID: 0}
   Effect1: {fileID: 2087212078212776621, guid: 51552f3da6686f24895dae63847b3eae, type: 3}
   Effect2: {fileID: 2087212078212776621, guid: 4436709dbbf0d6647a845b9242a1870c, type: 3}
