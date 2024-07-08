@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5017520516601502817}
   - component: {fileID: 5017520516601502816}
   - component: {fileID: 5017520516601502819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stella 4
   m_TagString: Stella4
   m_Icon: {fileID: 0}
