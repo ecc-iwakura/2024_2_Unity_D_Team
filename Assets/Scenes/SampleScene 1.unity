@@ -2364,7 +2364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 35
-  duration: 1
+  duration: 120
 --- !u!1 &1356098688
 GameObject:
   m_ObjectHideFlags: 0
