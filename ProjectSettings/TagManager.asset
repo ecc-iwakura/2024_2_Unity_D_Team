@@ -24,7 +24,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Stella
+  - 
   - Water
   - UI
   - 
@@ -56,7 +56,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Stella
-    uniqueID: 3085340445
     locked: 0
