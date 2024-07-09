@@ -13,7 +13,8 @@ public class MetorCreat : MonoBehaviour
     public int y = 0;
     public int x = 0;
     [SerializeField] GameObject smokeEffect;
-
+    [SerializeField]
+    private AudioSource audioSource;//鳴らしたい効果音が入ったオブジェクトをアタッチ
 
     public void Spawnmeteor()
     {
@@ -28,6 +29,7 @@ public class MetorCreat : MonoBehaviour
         {
             Destroy(other.gameObject);
             //manager.gameover();
+            audioSource.Play();
             GameObject smoke = Instantiate(smokeEffect, transform.position, Quaternion.identity);
             Destroy(smoke, 30);
         }

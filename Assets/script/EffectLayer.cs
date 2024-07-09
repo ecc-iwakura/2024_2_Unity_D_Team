@@ -25,6 +25,7 @@ public class EffectLayer : MonoBehaviour
             Renderer childRenderer = child.GetComponent<Renderer>();
             if (childRenderer != null)
             {
+
                 childRenderer.sortingLayerName = EFFECT_SORTING_LAYER_NAME;
             }
 
