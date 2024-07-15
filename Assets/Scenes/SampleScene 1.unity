@@ -2462,7 +2462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 35
-  duration: 120
+  duration: 90
 --- !u!1 &1356098688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,7 +2899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9ab7453b74fa748bc135edddca6601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleartime: 120
+  cleartime: 90
   end:
   - {fileID: 1688163093}
 --- !u!1 &1688163093
@@ -2946,7 +2946,7 @@ MonoBehaviour:
   x_min: -14
   cooldown_max: 1.2
   cooldown_min: 0.3
-  ShowerTime: 8
+  ShowerTime: 7
 --- !u!4 &1688163095
 Transform:
   m_ObjectHideFlags: 0
@@ -2974,8 +2974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f74ceef4058b2349ae28a9e0ca477ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown_max: 23
-  cooldown_min: 17
+  cooldown_max: 18
+  cooldown_min: 15
   shower: {fileID: 1688163094}
   meteor: {fileID: 583752366}
   crowdy: {fileID: 1688163097}
@@ -3000,8 +3000,8 @@ MonoBehaviour:
   y_min: 0
   cooldown_max: 4
   cooldown_min: 2
-  crowd_max: 6
-  crowd_min: 3
+  crowd_max: 5
+  crowd_min: 4
 --- !u!1 &1760899740
 GameObject:
   m_ObjectHideFlags: 0
