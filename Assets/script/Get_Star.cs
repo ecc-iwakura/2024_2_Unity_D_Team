@@ -8,6 +8,8 @@ public class Get_Star : MonoBehaviour
     private Star_bag manager;//Star_bagが入ったオブジェクトをアタッチ
     [SerializeField]
     private AudioSource audioSource;//鳴らしたい効果音が入ったオブジェクトをアタッチ
+    [SerializeField]
+    private Score score;
 
     public string[] targetTags = { };
     [SerializeField] GameObject[] Effect;
@@ -29,6 +31,7 @@ public class Get_Star : MonoBehaviour
                 if (index != -1)
                 {
                     manager.AddScore(index, 1);
+                    score.AddScore(100);
                     Destroy(hitObject);
                     audioSource.Play();
                     GameObject effect = Instantiate(Effect[index], mousePosition, Quaternion.identity);
