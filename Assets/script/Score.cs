@@ -7,22 +7,27 @@ using UnityEngine.UIElements;
 public class Score : MonoBehaviour
 {
     int score=0; // スコアの配列
-    public GameObject scoreObjects = null; // Textオブジェクト
+    
+    public GameObject[] scoreObjects = null; // Textオブジェクト
     
     
     void Start()
     {
-
-            Text scoreText = scoreObjects.GetComponent<Text>();
+        for (int i = 0; i < scoreObjects.Length; i++)
+        {
+            Text scoreText = scoreObjects[i].GetComponent<Text>();
             // 初期表示を設定するなどの処理があればここで行う
-        
+        }
     }
 
     void Update()
     {
-        Text scoreText = scoreObjects.GetComponent<Text>();
+        for (int i = 0; i < scoreObjects.Length; i++)
+        {
+            Text scoreText = scoreObjects[i].GetComponent<Text>();
         // テキストの表示を入れ替える
         scoreText.text = "Score:" + (score / 1);
+        }
     }
 
     public void AddScore(int value)
