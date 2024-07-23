@@ -4,6 +4,8 @@ using UnityEngine;
 
 class Star_Creat : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem particle;
+
     public GameObject[] star_prefabs;
     public int y = 0;
     public float x_max = 0;
@@ -38,9 +40,10 @@ class Star_Creat : MonoBehaviour
     {
         if (meteorShowerRunning)
             yield break;
+       
 
         meteorShowerRunning = true;
-
+        particle.Play();
         // メテオシャワー中の間、生成間隔を短縮
         float originalCooldownMax = cooldown_max;
         float originalCooldownMin = cooldown_min;
