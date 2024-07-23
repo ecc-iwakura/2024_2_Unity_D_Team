@@ -37,7 +37,7 @@ public class Score : MonoBehaviour
         score += value;
     }
 
-    public int GetScore(int index)
+    public int GetScore()
     {
 
         return score;
