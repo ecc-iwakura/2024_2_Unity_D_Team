@@ -13,6 +13,7 @@ public class Get_Star : MonoBehaviour
 
     public string[] targetTags = { };
     [SerializeField] GameObject[] Effect;
+    public int[] scorepls;
 
     private void Update()
     {
@@ -31,7 +32,7 @@ public class Get_Star : MonoBehaviour
                 if (index != -1)
                 {
                     manager.AddScore(index, 1);
-                    score.AddScore(100);
+                score.AddScore(scorepls[index]);
                     Destroy(hitObject);
                     audioSource.Play();
                     GameObject effect = Instantiate(Effect[index], mousePosition, Quaternion.identity);
