@@ -30,17 +30,17 @@ public class Star_Event_Manager : MonoBehaviour
         switch (eventIndex)
         {
             case 0:
-                Debug.Log("0");
+               
                 shower.StartMeteorShower();
                 break;
 
             case 1:
-                Debug.Log("1");
+               
                 crowdy.CloudyWeather();
                 break;
 
             case 2:
-                Debug.Log("2");
+               
                 meteor.Spawnmeteor();
                 break;
 
