@@ -30,15 +30,14 @@ public class Star_Manager : MonoBehaviour
     // 更新
     void Update()
     {
-        if (Input.GetMouseButton(1) || Input.GetMouseButton(0))
+        
+        for (int j = 0; j < scoreObjects.Length; j++)
         {
-            for (int j = 0; j < scoreObjects.Length; j++)
-            {
-                Text scoreText = scoreObjects[j].GetComponent<Text>();
-                scores[j] = manager.GetScore(j);
-                // テキストの表示を入れ替える
-                scoreText.text = "" + (scores[j] / 1);
-            }
+            Text scoreText = scoreObjects[j].GetComponent<Text>();
+            scores[j] = manager.GetScore(j);
+            // テキストの表示を入れ替える
+            scoreText.text = "" + (scores[j] / 1);
         }
+        
     }
 }
